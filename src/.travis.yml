@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t jaytabatabai/docker-react -f Dockerfile.dev .
+  - docker build -t jaytaba/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true USERNAME/docker-react npm run test -- --coverage
+  - docker run -e CI=true jaytaba/docker-react npm run test -- --coverage
